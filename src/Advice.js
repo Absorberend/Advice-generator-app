@@ -19,11 +19,17 @@ export default function Advice() {
   useEffect(() => {
     
     get("advice").then(data => {
+      setButtonClicked(true);
+
       if (!isInit) {
         setData(data);
         // eslint-disable-next-line
         isInit = true;
       }
+      setTimeout(() => {
+        setButtonClicked(false);
+      }, 2000);
+
     })
     .catch(error => console.error(error));    
     // eslint-disable-next-line
@@ -43,13 +49,18 @@ export default function Advice() {
 
   return (
     <section className="advice">
-        <div className="advice__number">Advice #{data.slip?.id || "none"}</div>
+        <h1 className="advice__number">Advice #{data.slip?.id || "none"}</h1>
         <div className="advice__quote">"{data.slip?.advice || "Press the button for a new quote."}"</div>
         <div className="advice__divider">
             {isTabletOrMobile && <img src={mobileDivider} alt="" />}
             {isDesktop && <img src={desktopDivider} alt="" />}
         </div>
-        <button className="advice__dice" onClick={handleButtonClick} disabled={buttonClicked ? true : false}>
+        <button 
+          className="advice__dice" 
+          onClick={handleButtonClick} 
+          disabled={buttonClicked ? true : false}
+          aria-label="roll dice"
+        >
             <div>
                 <img src={diceIcon} alt="" />
             </div>

@@ -4,7 +4,9 @@ import Advice from './Advice';
 function App() {
   return (
     <div>
-      <Advice />
+      <main>
+        <Advice />
+      </main>
     </div>
   );
 }
