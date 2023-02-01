@@ -53,17 +53,6 @@
         padding: 0;
     }
 
-    &__dice:disabled div,
-    &__dice:disabled div:hover {
-        background-color: gray;
-        box-shadow: none;
-    }
-
-    &__dice div:hover {
-        box-shadow: 0 0 30px 5px $neon-green;
-        cursor: pointer;
-    }
-
     &__dice div {
         position: absolute;
         background-color: $neon-green;
@@ -72,6 +61,18 @@
         padding: 1.2em;
         justify-content: center;
         border-radius: 50%;
+    }
+
+    &__dice div:hover {
+        box-shadow: 0 0 30px 5px $neon-green;
+        cursor: pointer;
+    }
+
+    &__dice:disabled div,
+    &__dice:disabled div:hover {
+        background-color: gray;
+        box-shadow: none;
+        cursor:default;
     }
 }
 

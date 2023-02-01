@@ -21,6 +21,7 @@ export default function Advice() {
     get("advice").then(data => {
       if (!isInit) {
         setData(data);
+        // eslint-disable-next-line
         isInit = true;
       }
     })

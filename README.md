@@ -15,5 +15,5 @@ https://www.frontendmentor.io/challenges/advice-generator-app-QdUG-13db
 
 ![My solution](./public/Advice-generator-app.png "My solution")
 
-View my solution at: https://tourmaline-rolypoly-f76373.netlify.app
+View my solution at: https://dainty-mandazi-db2546.netlify.app/
 
