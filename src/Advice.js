@@ -43,7 +43,7 @@ export default function Advice() {
   return (
     <section className="advice">
         <div className="advice__number">Advice #{data.slip?.id || "none"}</div>
-        <div className="advice__quote">{data.slip?.advice || "Press the button for a new quote."}</div>
+        <div className="advice__quote">"{data.slip?.advice || "Press the button for a new quote."}"</div>
         <div className="advice__divider">
             {isTabletOrMobile && <img src={mobileDivider} alt="" />}
             {isDesktop && <img src={desktopDivider} alt="" />}
