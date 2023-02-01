@@ -30,7 +30,11 @@
         color: $light-cyan;
         font-size: 20px;
         letter-spacing: 0.05em;
+        height: 140px;
         text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         -webkit-user-select: text;
         -webkit-touch-ctextout: text;
         -moz-user-select: text;
@@ -43,6 +47,16 @@
         width: 100%;
         display: flex;
         justify-content: center;
+        margin: 0;
+        background-color: inherit;
+        border: 0;
+        padding: 0;
+    }
+
+    &__dice:disabled div,
+    &__dice:disabled div:hover {
+        background-color: gray;
+        box-shadow: none;
     }
 
     &__dice div:hover {
